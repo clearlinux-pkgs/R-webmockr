@@ -4,18 +4,20 @@
 #
 Name     : R-webmockr
 Version  : 0.3.4
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/webmockr_0.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/webmockr_0.3.4.tar.gz
 Summary  : Stubbing and Setting Expectations on 'HTTP' Requests
 Group    : Development/Tools
 License  : MIT
-Requires: R-crul
-Requires: R-curl
-Requires: R-fauxpas
+Requires: R-jsonlite
+Requires: R-urltools
 BuildRequires : R-crul
 BuildRequires : R-curl
 BuildRequires : R-fauxpas
+BuildRequires : R-jsonlite
+BuildRequires : R-lazyeval
+BuildRequires : R-urltools
 BuildRequires : buildreq-R
 
 %description
@@ -37,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549725123
+export SOURCE_DATE_EPOCH=1552914994
 
 %install
-export SOURCE_DATE_EPOCH=1549725123
+export SOURCE_DATE_EPOCH=1552914994
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

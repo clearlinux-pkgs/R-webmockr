@@ -2,4 +2,6 @@
 R-crul
 R-curl
 R-fauxpas
+R-jsonlite
 R-lazyeval
+R-urltools
