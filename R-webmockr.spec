@@ -4,7 +4,7 @@
 #
 Name     : R-webmockr
 Version  : 0.6.2
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/webmockr_0.6.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/webmockr_0.6.2.tar.gz
 Summary  : Stubbing and Setting Expectations on 'HTTP' Requests
@@ -27,33 +27,30 @@ BuildRequires : R-urltools
 BuildRequires : buildreq-R
 
 %description
-webmockr
-========
-[![cran checks](https://cranchecks.info/badges/worst/webmockr)](https://cranchecks.info/pkgs/webmockr)
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/ropensci/webmockr.svg?branch=master)](https://travis-ci.org/ropensci/webmockr)
-[![Build status](https://ci.appveyor.com/api/projects/status/47scc0vur41sbfyx?svg=true)](https://ci.appveyor.com/project/sckott/webmockr)
-[![codecov](https://codecov.io/gh/ropensci/webmockr/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/webmockr)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/webmockr)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/webmockr)](https://cran.r-project.org/package=webmockr)
+Includes tools for stubbing 'HTTP' requests, including expected
+    request conditions and response conditions. Match on
+    'HTTP' method, query parameters, request body, headers and
+    more. Can be used for unit tests or outside of a testing 
+    context.
 
 %prep
 %setup -q -c -n webmockr
+cd %{_builddir}/webmockr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585149285
+export SOURCE_DATE_EPOCH=1589772581
 
 %install
-export SOURCE_DATE_EPOCH=1585149285
+export SOURCE_DATE_EPOCH=1589772581
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
