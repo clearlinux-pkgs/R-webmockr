@@ -4,7 +4,7 @@
 #
 Name     : R-webmockr
 Version  : 0.8.0
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/webmockr_0.8.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/webmockr_0.8.0.tar.gz
 Summary  : Stubbing and Setting Expectations on 'HTTP' Requests
