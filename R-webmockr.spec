@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : R-webmockr
-Version  : 2.1.0
-Release  : 58
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/webmockr_2.1.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/webmockr_2.1.0.tar.gz
+Version  : 2.2.0
+Release  : 59
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/webmockr_2.2.0.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/webmockr_2.2.0.tar.gz
 Summary  : Stubbing and Setting Expectations on 'HTTP' Requests
 Group    : Development/Tools
 License  : MIT
@@ -52,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1751292836
+export SOURCE_DATE_EPOCH=1753107040
 
 %install
-export SOURCE_DATE_EPOCH=1751292836
+export SOURCE_DATE_EPOCH=1753107040
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -114,6 +114,7 @@ R CMD INSTALL --preclean  --use-LTO --install-tests --data-compress=none --compr
 /usr/lib64/R/library/webmockr/ignore/sockets.R
 /usr/lib64/R/library/webmockr/tests/test-all.R
 /usr/lib64/R/library/webmockr/tests/testthat/_snaps/Adapter.md
+/usr/lib64/R/library/webmockr/tests/testthat/_snaps/flipswitch.md
 /usr/lib64/R/library/webmockr/tests/testthat/crul_body_upload_list.rda
 /usr/lib64/R/library/webmockr/tests/testthat/crul_body_upload_no_list.rda
 /usr/lib64/R/library/webmockr/tests/testthat/crul_obj.rda
@@ -137,7 +138,6 @@ R CMD INSTALL --preclean  --use-LTO --install-tests --data-compress=none --compr
 /usr/lib64/R/library/webmockr/tests/testthat/test-StubRegistry.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-StubbedRequest.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-auth_handling.R
-/usr/lib64/R/library/webmockr/tests/testthat/test-b-no-cassette-in-use.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-flipswitch.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-last_request.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-last_stub.R
@@ -159,6 +159,5 @@ R CMD INSTALL --preclean  --use-LTO --install-tests --data-compress=none --compr
 /usr/lib64/R/library/webmockr/tests/testthat/test-webmockr_reset.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-wi_th.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-within_test_that_blocks.R
-/usr/lib64/R/library/webmockr/tests/testthat/test-writing-to-disk-write_disk_path.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-writing-to-disk.R
 /usr/lib64/R/library/webmockr/tests/testthat/test-zutils.R
